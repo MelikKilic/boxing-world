@@ -1,0 +1,172 @@
+.panel {
+    background: #fff;
+    border: 1px solid rgba(0,0,0,0.08);
+    border-radius: 16px;
+    padding: 18px;
+    box-shadow: 0 12px 35px rgba(0,0,0,0.06);
+}
+
+.alert {
+    border-radius: 12px;
+    padding: 12px 14px;
+    margin: 12px 0;
+}
+
+.alert-success {
+    background: #eefbf1;
+    border: 1px solid #bfe8c5;
+}
+
+.alert-error {
+    background: #fff1f1;
+    border: 1px solid #f0b7b7;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 12px;
+    align-items: start;
+    margin-top: 12px;
+}
+
+.field {
+    grid-column: span 12;
+    display: grid;
+    gap: 6px;
+}
+
+@media (min-width: 900px) {
+    .field {
+        grid-column: span 6;
+    }
+}
+
+.field-full {
+    grid-column: span 12 !important;
+}
+
+.field span {
+    font-size: 0.85rem;
+    opacity: 0.75;
+}
+
+.field input,
+.field select,
+.field textarea {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid rgba(0,0,0,0.15);
+    border-radius: 12px;
+    padding: 10px 12px;
+    font-size: 1rem;
+    line-height: 1.25;
+    outline: none;
+}
+
+.field input,
+.field select {
+    min-height: 44px;
+}
+
+.field textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+    border-color: rgba(0,0,0,0.35);
+}
+
+.field-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-top: 4px;
+}
+
+.profile-page .panel {
+    background: #fff;
+    border: 1px solid rgba(0,0,0,0.08);
+    border-radius: 16px;
+    padding: 18px;
+    box-shadow: 0 12px 35px rgba(0,0,0,0.06);
+    margin-bottom: 16px;
+}
+
+.profile-page .alert {
+    border-radius: 12px;
+    padding: 12px 14px;
+    margin: 12px 0;
+}
+
+.profile-page .alert-success {
+    background: #eefbf1;
+    border: 1px solid #bfe8c5;
+}
+
+.profile-page .alert-error {
+    background: #fff1f1;
+    border: 1px solid #f0b7b7;
+}
+
+.profile-page .form-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.profile-page .field {
+    grid-column: span 12;
+    display: grid;
+    gap: 6px;
+}
+
+@media (min-width: 900px) {
+    .profile-page .field {
+        grid-column: span 6;
+    }
+}
+
+.profile-page .field-full {
+    grid-column: span 12 !important;
+}
+
+.profile-page .field span {
+    font-size: 0.85rem;
+    opacity: 0.75;
+}
+
+.profile-page .field input,
+.profile-page .field select,
+.profile-page .field textarea {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid rgba(0,0,0,0.15);
+    border-radius: 12px;
+    padding: 10px 12px;
+    font-size: 1rem;
+    line-height: 1.25;
+    outline: none;
+}
+
+.profile-page .field input,
+.profile-page .field select {
+    min-height: 44px;
+}
+
+.profile-page .field textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.profile-page .field-actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 6px;
+}
