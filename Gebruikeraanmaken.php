@@ -26,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <body>
     <form method="POST">
         <h1>Nieuwe gebruikersnaam</h1>
-        <a href="index.php" class="container"><button type="button">terug</button></a>
+        <a href="index.php" class="container">terug</a>
         <label for="username">Gebruikersnaam</label>
         <input type="text" id="username" name="username"><br>
 
