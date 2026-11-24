@@ -369,6 +369,7 @@ if ($newsTableExists) {
                         <label class="field">
                             <span>Categorie</span>
                             <select name="categorie" required>
+                                <option value="" disabled>Maak een keuze</option>
                                 <?php foreach ($categories as $category): ?>
                                     <option value="<?= htmlspecialchars($category) ?>" <?= $formData['categorie'] === $category ? 'selected' : '' ?>><?= htmlspecialchars($category) ?></option>
                                 <?php endforeach; ?>
@@ -378,6 +379,7 @@ if ($newsTableExists) {
                         <label class="field">
                             <span>Status</span>
                             <select name="status" required>
+                                <option value="" disabled>Maak een keuze</option>
                                 <?php foreach ($statuses as $status): ?>
                                     <option value="<?= htmlspecialchars($status) ?>" <?= $formData['status'] === $status ? 'selected' : '' ?>><?= htmlspecialchars($status) ?></option>
                                 <?php endforeach; ?>
