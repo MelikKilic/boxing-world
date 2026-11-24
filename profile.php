@@ -199,6 +199,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <label class="field">
                         <span>Vecht-stand</span>
                         <select name="vecht_stand" required>
+                            <option value="" disabled>Maak een keuze</option>
                             <?php
                             $current = (string)($_POST['vecht_stand'] ?? 'Orthodox');
                             foreach (['Orthodox', 'Southpaw', 'Switch', 'Onbekend'] as $opt) {
@@ -275,6 +276,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <label class="field">
                         <span>Categorie</span>
                         <select name="news_categorie" required>
+                            <option value="" disabled>Maak een keuze</option>
                             <?php
                             $selectedCategorie = (string)($_POST['news_categorie'] ?? 'Aankondiging');
                             foreach ($newsCategorieen as $categorie) {
