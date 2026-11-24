@@ -47,6 +47,16 @@ function formatDutchDate(?string $date): string
     return (int)$dt->format('j') . ' ' . $months[(int)$dt->format('n')] . ' ' . $dt->format('Y');
 }
 
+function dateTag(?string $date): string
+{
+    $dt = parseMatchDate($date);
+    if (!$dt) {
+        return '<span class="date-tbd">Datum volgt</span>';
+    }
+
+    return '<time datetime="' . $dt->format('Y-m-d') . '">' . htmlspecialchars(formatDutchDate($date)) . '</time>';
+}
+
 $newsItems = [];
 $upcomingMatches = [];
 $recentResults = [];
@@ -132,7 +142,7 @@ if (tableExists($pdo, 'wedstrijden') && tableExists($pdo, 'vechters')) {
                             <span class="chip"><?= htmlspecialchars((string)$item['categorie']) ?></span>
                             <h3><?= htmlspecialchars((string)$item['titel']) ?></h3>
                             <p><?= htmlspecialchars((string)($item['samenvatting'] ?: $item['inhoud'])) ?></p>
-                            <time><?= htmlspecialchars(formatDutchDate($item['event_datum'] ?: null)) ?></time>
+                            <?= dateTag($item['event_datum'] ?: null) ?>
                         </article>
                     <?php endforeach; ?>
                 </div>
@@ -178,7 +188,7 @@ if (tableExists($pdo, 'wedstrijden') && tableExists($pdo, 'vechters')) {
                             <h3><?= htmlspecialchars($match['event_naam'] ?: 'Event') ?></h3>
                             <p class="fight-line"><?= htmlspecialchars($match['vechter1_naam']) ?> vs <?= htmlspecialchars($match['vechter2_naam']) ?></p>
                             <p class="result-text"><?= htmlspecialchars($match['uitslag'] ?: 'Uitslag nog niet ingevuld') ?></p>
-                            <time><?= htmlspecialchars(formatDutchDate($match['datum'] ?? null)) ?></time>
+                            <?= dateTag($match['datum'] ?? null) ?>
                         </article>
                     <?php endforeach; ?>
                 </div>
