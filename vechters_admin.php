@@ -223,6 +223,7 @@ $fighters = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     <label class="field">
                         <span>Vecht-stand</span>
                         <select name="vecht_stand" required>
+                            <option value="" disabled>Maak een keuze</option>
                             <?php foreach (['Orthodox', 'Southpaw', 'Switch', 'Onbekend'] as $opt): ?>
                                 <option value="<?= htmlspecialchars($opt) ?>" <?= $formData['vecht_stand'] === $opt ? 'selected' : '' ?>><?= htmlspecialchars($opt) ?></option>
                             <?php endforeach; ?>
